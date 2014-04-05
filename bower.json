@@ -1,0 +1,6 @@
+{
+    "name": "aert-angular",
+    "dependencies": {
+        "angular": "1.2.x"
+    }
+}

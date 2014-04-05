@@ -40,3 +40,4 @@ nosetests.xml
 # Assets
 /angular/static/.webassets-cache/
 /angular/static/gen/
+/bower_components

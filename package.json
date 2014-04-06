@@ -1,0 +1,20 @@
+{
+  "name": "aert-angular-npm",
+  "version": "1.0.0dev",
+  "description": "Js deps for aert-angular",
+  "repository": {
+    "type": "git"
+  },
+  "author": "AERT",
+  "devDependencies": {
+    "bower": "latest",
+    "grunt": "~0.4.2",
+    "coffee-script": "latest",
+    "grunt-contrib-copy": "0.5.x",
+    "grunt-contrib-clean": "0.5.x",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-jade": "latest",
+    "grunt-contrib-coffee": "latest",
+    "grunt-contrib-watch": "0.6.x"
+  }
+}

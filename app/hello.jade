@@ -1,0 +1,10 @@
+doctype html
+html(ng-app)
+    head
+        meta(charset="utf-8")
+        script(src="js/base.min.js")
+        script(src="controller.js")
+
+    body
+        div(ng-controller="HelloController")
+            p {{greeting.text}}, World

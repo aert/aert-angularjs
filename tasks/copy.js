@@ -6,7 +6,7 @@ module.exports = {
                 expand: true,
                 cwd: "bower_components/bootstrap/dist/fonts/",
                 src: "*",
-                dest: "build/assets/fonts/"
+                dest: "build/static/fonts/"
             }
         ]
     }

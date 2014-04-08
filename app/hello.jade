@@ -1,8 +1,10 @@
 doctype html
-html(ng-app)
+html(ng-app="shoppingApp")
     head
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        title Your shopping Cart
 
         // build:css assets/css/base.min.css
         link(rel="stylesheet", href="bower_components/bootstrap/dist/css/bootstrap.min.css")
@@ -12,6 +14,7 @@ html(ng-app)
         // build:js assets/js/base.min.js
         script(src="bower_components/jquery/dist/jquery.min.js")
         script(src="bower_components/angular/angular.min.js")
+        script(src="bower_components/angular-i18n/angular-locale_fr-fr.js")
         script(src="bower_components/bootstrap/dist/js/bootstrap.min.js")
         // endbuild
 
@@ -19,12 +22,36 @@ html(ng-app)
         script(src=".tmp/app/controller.js")
         // endbuild 
 
-    body
+    body(ng-controller="CartController")
         .body
-            .panel.panel-default
+            br
+            br
+            .panel.panel-info
                 .panel-heading
-                    h4 Chap. I
+                    h4 Your Orders
                 .panel-body
-                    div(ng-controller="HelloController")
-                        input(ng-model="greeting.text", class="form-control")
-                        p {{greeting.text}}, World
+                    div.row(ng-repeat="item in items")
+                        .col-sm-8
+                            form.form-horizontal(role="form")
+                                .form-group
+                                    label.control-label.col-sm-3 {{ item.title }}
+                                    .col-sm-9.input-group
+                                        input.form-control(ng-model="item.quantity", ng-change="recalcTotals()")
+                                        span.input-group-btn
+                                            button.btn.btn-default(ng-click="remove($index)")
+                                                span {{ item.price | currency }} &times;
+                        .col-sm-4
+                            span {{ item.price * item.quantity | currency }}
+                .panel-footer
+                    .row
+                        .col-sm-2 Total:
+                        .col-sm-10 {{ totalCart | currency }}
+                    .row
+                        .col-sm-2 Discount:
+                        .col-sm-10 {{ bill.discount | currency }}
+                    .row
+                        .col-sm-2 Subtotal:
+                        .col-sm-10 {{ bill.subTotal | currency }}
+                    .row
+                        .col-sm-2 Calc Count:
+                        .col-sm-10 {{ debug.calcCount }}

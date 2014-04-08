@@ -1,7 +1,8 @@
 {
-    "name": "aert-angular",
-    "dependencies": {
-        "angular": "1.2.x",
-        "bootstrap": "3.x"
-    }
+  "name": "aert-angular",
+  "dependencies": {
+    "angular": "1.2.x",
+    "bootstrap": "3.x",
+    "angular-i18n": "1.2.x"
+  }
 }

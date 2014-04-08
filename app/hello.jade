@@ -20,5 +20,11 @@ html(ng-app)
         // endbuild 
 
     body
-        div(ng-controller="HelloController")
-            p {{greeting.text}}, World
+        .body
+            .panel.panel-default
+                .panel-heading
+                    h4 Chap. I
+                .panel-body
+                    div(ng-controller="HelloController")
+                        input(ng-model="greeting.text", class="form-control")
+                        p {{greeting.text}}, World

@@ -15,8 +15,10 @@
     "grunt-contrib-concat": "latest",
     "grunt-contrib-jade": "latest",
     "grunt-contrib-coffee": "latest",
+    "grunt-contrib-less": "0.11.x",
     "grunt-contrib-uglify": "0.4.x",
     "grunt-contrib-cssmin": "0.9.x",
+    "grunt-filerev": "0.2.x",
     "grunt-usemin": "2.1.x",
     "grunt-contrib-watch": "0.6.x"
   }

@@ -2,16 +2,22 @@ doctype html
 html(ng-app)
     head
         meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
-        <!-- build:js js/base.min.js -->
-        script(src="../bower_components/jquery/dist/jquery.min.js")
-        script(src="../bower_components/angular/angular.min.js")
-        script(src="../bower_components/bootstrap/dist/js/bootstrap.min.js")
-        <!-- endbuild -->
+        // build:css assets/css/base.min.css
+        link(rel="stylesheet", href="bower_components/bootstrap/dist/css/bootstrap.min.css")
+        link(rel="stylesheet", href=".tmp/app/assets/css/app.css")
+        // endbuild 
 
-        <!-- build:js controller.js -->
-        script(src="controller.js")
-        <!-- endbuild -->
+        // build:js assets/js/base.min.js
+        script(src="bower_components/jquery/dist/jquery.min.js")
+        script(src="bower_components/angular/angular.min.js")
+        script(src="bower_components/bootstrap/dist/js/bootstrap.min.js")
+        // endbuild
+
+        // build:js controller.js 
+        script(src=".tmp/app/controller.js")
+        // endbuild 
 
     body
         div(ng-controller="HelloController")

@@ -43,3 +43,4 @@ nosetests.xml
 /bower_components
 /node_modules
 /build
+/.tmp

@@ -1,9 +1,9 @@
 module.exports = {
-    compile: {
+    production: {
         expand: true,
         cwd: "app/",
-        src: ['**/*.coffee'],
+        src: ['**/*.less'],
         dest: '.tmp/app/',
-        ext: '.js'
+        ext: '.css'
     }
 };

@@ -1,6 +1,6 @@
 module.exports = {
-    html: ["dist/hello.html"],
-    options: {
-        assetsDir: ["dist/"]
-    }
+    html: ["build/hello.html"]
+    //options: {
+    //    assetsDir: ["dist/"]
+    //}
 };

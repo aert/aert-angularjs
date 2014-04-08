@@ -1,4 +1,4 @@
 module.exports = {
-    build: ["build"],
+    build: ["build", ".tmp"],
     all: ["build", "bower_components", "node_modules"]
 };
